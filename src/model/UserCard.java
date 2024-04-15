@@ -3,14 +3,12 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class userCard {
-    private String userName;
-    private double numberCard;
+public class UserCard {
     private double limitValue;
     private double balance;
     private List<Shopping> shopping;
 
-    public userCard(double limitValue) {
+    public UserCard(double limitValue) {
         this.limitValue = limitValue;
         this.balance = limitValue;
         this.shopping = new ArrayList<>();
