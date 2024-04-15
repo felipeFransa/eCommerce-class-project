@@ -2,6 +2,7 @@ package Main;
 import model.Shopping;
 import model.UserCard;
 
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -43,6 +44,7 @@ public class Main {
         }
         System.out.println("********************************");
         System.out.println("Shopping valid\n");
+        Collections.sort(card.getShopping());
 
         for (Shopping s : card.getShopping()) {
             System.out.println(s.getNameProduct() + " R$ " + s.getProductValue());

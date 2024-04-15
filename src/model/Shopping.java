@@ -1,6 +1,6 @@
 package model;
 
-public class Shopping {
+public class Shopping implements Comparable<Shopping> {
     private String nameProduct;
     private double productValue;
     private String productType;
@@ -30,5 +30,10 @@ public class Shopping {
                 ", productValue=" + productValue +
                 ", productType='" + productType + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Shopping o) {
+        return Double.valueOf(this.productValue).compareTo(Double.valueOf(o.productValue));
     }
 }
