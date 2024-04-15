@@ -5,27 +5,30 @@ public class Shopping {
     private double productValue;
     private String productType;
 
-    public String getNameProduct() {
-        return nameProduct;
-    }
-
-    public void setNameProduct(String nameProduct) {
+    public Shopping(String nameProduct, double productValue, String productType) {
         this.nameProduct = nameProduct;
+        this.productValue = productValue;
+        this.productType = productType;
     }
 
     public double getProductValue() {
         return productValue;
     }
 
-    public void setProductValue(double productValue) {
-        this.productValue = productValue;
-    }
-
     public String getProductType() {
         return productType;
     }
 
-    public void setProductType(String productType) {
-        this.productType = productType;
+    public String getNameProduct() {
+        return nameProduct;
+    }
+
+    @Override
+    public String toString() {
+        return "Shopping: {" +
+                "nameProduct='" + nameProduct + '\'' +
+                ", productValue=" + productValue +
+                ", productType='" + productType + '\'' +
+                '}';
     }
 }
